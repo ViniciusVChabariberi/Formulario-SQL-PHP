@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 14-Maio-2023 às 05:46
+-- Tempo de geração: 14-Maio-2023 às 05:54
 -- Versão do servidor: 10.4.28-MariaDB
 -- versão do PHP: 8.2.4
 
@@ -42,6 +42,7 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`id`, `nome`, `endereco`, `bairro`, `cep`, `cidade`, `estado`) VALUES
+(120, 'Edenilson Leandro', 'Edmundo kirmayr', 'Santana', 12345, 'São paulo', 'SP'),
 (121, 'Danieli da Silva Schiler', 'Rua Maria de Fátima da Silva', 'Aririu da Formiga', 12345, 'São paulo', 'SP'),
 (124, 'Angelica Valero', 'Avenida Augusto Antunes', 'Limoeiro', 12345, 'São paulo', 'SP'),
 (251, 'Robert Duvall', 'Rua Iaruçu', 'A.E. Carvalho', 12345, 'São paulo', 'SP');
