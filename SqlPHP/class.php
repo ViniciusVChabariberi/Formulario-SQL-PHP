@@ -3,11 +3,11 @@
     class Principal{
         private $id;
         private $nome;
-        private $Endereco;
-        private $Bairro;
-        private $Cep;
-        private $Cidade;
-        private $Estado;
+        private $endereco;
+        private $bairro;
+        private $cep;
+        private $cidade;
+        private $estado;
 
         public function getId(){
             return $this->id;
