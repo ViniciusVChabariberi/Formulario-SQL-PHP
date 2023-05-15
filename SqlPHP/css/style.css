@@ -60,3 +60,37 @@ nav {
     width: 100px;
     height: 40px;
 }
+
+/* dados.php */
+
+.consulta{
+    padding-top: 40px;
+    padding-bottom: 20px;
+    margin-right: 160px;
+}
+
+div.linha {
+    display: flex;
+    justify-content: center;
+}
+
+.tabela{
+    max-width: 65vw;
+}
+
+.tabela_linha {
+    gap: 50px;
+    height: 3.5rem;
+    width: 2rem;
+    padding: 1rem;
+    background-color: #007BFF;
+}
+
+.tabela_dados{
+    font-size: 1.2rem;
+    font-weight: 700; 
+}
+
+.tabela_c{
+    border: 1px  black;
+}
