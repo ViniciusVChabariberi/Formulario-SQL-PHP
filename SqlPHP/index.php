@@ -44,7 +44,7 @@
                     <form method="POST" action="dados.php">
                         <div class="mb-3">
                             <label class="formulario_titulos" for="data">ID:</label> 
-                            <input type="tel" class="form-control" placeholder="xxx" id="id" name="id" required>
+                            <input type="tel" class="form-control" placeholder="xxx" id="id" name="id">
                         </div>
                         <div class="mb-3">
                             <label class="formulario_titulos" for="nome">Nome:</label> 
