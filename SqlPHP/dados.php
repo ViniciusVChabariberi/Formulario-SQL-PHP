@@ -1,12 +1,11 @@
 <?php  
 
-    $idForm = $_POST['id'];
-    $nomeForm = $_POST['nome'];
-    $enderecoForm = $_POST['endereco'];
-    $bairroForm = $_POST['bairro'];
-    $cepForm = $_POST['cep'];
-    $cidadeForm = $_POST['cidade'];
-    $estadoForm = $_POST['estado'];
+    $nomeForm = $_POST['nome'] ?? "";
+    $enderecoForm = $_POST['endereco'] ?? "";
+    $bairroForm = $_POST['bairro'] ?? "";
+    $cepForm = $_POST['cep'] ?? "";
+    $cidadeForm = $_POST['cidade'] ?? "";
+    $estadoForm = $_POST['estado'] ?? "";
 
     define('MYSQL_HOST' , 'localhost:3306');
     define('MYSQL_USER' , 'root');
@@ -20,7 +19,7 @@
         echo "Erro ao tentar fazer a conexão com MYSQL: " . $ex->getMessage();
     }
 
-    $sql = "INSERT INTO `clientes`(`id`, `nome`, `endereco`, `bairro`, `cep`, `cidade`, `estado`) VALUES ('$idForm', '$nomeForm','$enderecoForm','$bairroForm','$cepForm', '$cidadeForm','$estadoForm')";
+    $sql = "INSERT INTO `clientes`(`nome`, `endereco`, `bairro`, `cep`, `cidade`, `estado`) VALUES ('$nomeForm','$enderecoForm','$bairroForm','$cepForm', '$cidadeForm','$estadoForm')";
 
     $cadastrarCliente = $pdo->prepare($sql);
     $cadastrarCliente->execute();
@@ -73,7 +72,6 @@
                     <table class="tabela table table-borderless">
                         <thead>
                             <tr class="tabela_linha">
-                                <td class="tabela_dados">ID</td>
                                 <td class="tabela_dados">Nome</td>
                                 <td class="tabela_dados">Endereço</td>
                                 <td class="tabela_dados">Bairro</td>
@@ -84,25 +82,6 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="tabela_c">
-                                    <?php
-                                    
-                                    try {
-                                        $pdo = new PDO( 'mysql:host=' . MYSQL_HOST . ';dbname=' . MYSQL_DB_NAME, MYSQL_USER, MYSQL_PASSWORD);
-                                    } catch ( PDOException $e ) {
-                                    
-                                        echo  'Erro ao conectar com o MySQL: ' . $e->getMessage();
-                                    }
-
-                                    $sql = "SELECT * FROM clientes";
-                                    $result = $pdo->query( $sql );
-                                    $rows = $result->fetchAll();
-
-                                    for ($i=0; $i < count($rows); $i++) { 
-                                    echo  $rows[$i]['id'] . "<br><br>";
-                                    }
-                                    ?>
-                                </td>
                                 <td class="tabela_c">
                                     <?php
                                     $sql = "SELECT * FROM clientes";

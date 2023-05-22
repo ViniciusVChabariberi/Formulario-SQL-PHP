@@ -43,10 +43,6 @@
                 <div class="col formulario">
                     <form method="POST" action="dados.php">
                         <div class="mb-3">
-                            <label class="formulario_titulos" for="data">ID:</label> 
-                            <input type="tel" class="form-control" placeholder="xxx" id="id" name="id">
-                        </div>
-                        <div class="mb-3">
                             <label class="formulario_titulos" for="nome">Nome:</label> 
                             <input type="text" class="form-control" name="nome" id="nome" required>
                         </div>  

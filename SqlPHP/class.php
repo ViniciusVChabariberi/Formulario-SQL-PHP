@@ -1,21 +1,12 @@
 <?php
 
     class Principal{
-        private $id;
         private $nome;
         private $endereco;
         private $bairro;
         private $cep;
         private $cidade;
         private $estado;
-
-        public function getId(){
-            return $this->id;
-        }
-
-        public function setId($id){
-            $this->id = $id;
-        }
 
         //Método GET
         public function getNome(){

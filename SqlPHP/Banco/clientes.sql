@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 14-Maio-2023 às 05:54
--- Versão do servidor: 10.4.28-MariaDB
--- versão do PHP: 8.2.4
+-- Tempo de geração: 22-Maio-2023 às 20:17
+-- Versão do servidor: 10.4.22-MariaDB
+-- versão do PHP: 8.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -35,17 +35,17 @@ CREATE TABLE `clientes` (
   `cep` int(9) NOT NULL,
   `cidade` varchar(100) NOT NULL,
   `estado` enum('SP','RJ','MG','ES') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `clientes`
 --
 
 INSERT INTO `clientes` (`id`, `nome`, `endereco`, `bairro`, `cep`, `cidade`, `estado`) VALUES
-(120, 'Edenilson Leandro', 'Edmundo kirmayr', 'Santana', 12345, 'São paulo', 'SP'),
-(121, 'Danieli da Silva Schiler', 'Rua Maria de Fátima da Silva', 'Aririu da Formiga', 12345, 'São paulo', 'SP'),
-(124, 'Angelica Valero', 'Avenida Augusto Antunes', 'Limoeiro', 12345, 'São paulo', 'SP'),
-(251, 'Robert Duvall', 'Rua Iaruçu', 'A.E. Carvalho', 12345, 'São paulo', 'SP');
+(1, 'Edenilson Leandro', 'Edmundo kirmayr', 'Santana', 12345, 'São paulo', 'SP'),
+(2, 'Danieli da Silva Schiler', 'Rua Maria de Fátima da Silva', 'Aririu da Formiga', 12345, 'São paulo', 'SP'),
+(3, 'Angelica Valero', 'Avenida Augusto Antunes', 'Limoeiro', 12345, 'São paulo', 'SP'),
+(4, 'Robert Duvall', 'Rua Iaruçu', 'A.E. Carvalho', 12345, 'São paulo', 'SP');
 
 --
 -- Índices para tabelas despejadas
@@ -56,6 +56,16 @@ INSERT INTO `clientes` (`id`, `nome`, `endereco`, `bairro`, `cep`, `cidade`, `es
 --
 ALTER TABLE `clientes`
   ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `clientes`
+--
+ALTER TABLE `clientes`
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
