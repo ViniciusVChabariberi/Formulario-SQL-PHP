@@ -12,13 +12,13 @@
     <body class="body">
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <nav class="navbar">
-                        <a class="navbar-brand" href="#"></a> 
-                            <a class="navbar-brand" href="#"><h3 class="title">SISTEMA WEB</h3></a>   
-                        <a class="navbar-brand" href="#"><p class="title"></p></a>
-                    </nav>
-                </div>    
+            <div class="col">
+                <nav class="navbar">
+                    <a href="consulta.php" class="navbar-brand title"><p class="p">Consulta de Dados</p></a>
+                        <a href="index.php" class="navbar-brand"><h3 class="title">SISTEMA WEB</h3></a>
+                    <a href="cadastroPag.php" class="navbar-brand title"><p class="p">Cadastro de Clientes</p></a>
+                </nav>
+            </div>
             </div>
             <div class="row">
                 <div class="col">
@@ -28,7 +28,7 @@
             </div>
             <div class="row">    
                 <div class="col formulario">
-                    <form method="POST" action="SQL.php">
+                    <form method="POST" action="cadastro.php">
                         <div class="mb-3">
                             <label class="formulario_titulos" for="nome">Nome:</label> 
                             <input type="text" class="form-control" name="nome" id="nome" autocomplete= off required>
@@ -70,7 +70,6 @@
                             <br>
                             <br>
                             <br>
-                            <a href="dados.php" class="Options">Já tem um cadastro? Clique aqui para consultar.</a>
                         </div>    
                             <br>
                     </form>

@@ -26,13 +26,13 @@
 <body class="body">
         <div class="container">
             <div class="row">
-                <div class="col">
+            <div class="col">
                 <nav class="navbar">
-                        <a class="navbar-brand" href="index.php"></a> 
-                            <a class="navbar-brand" href="#"><h3 class="title">SISTEMA WEB</h3></a>   
-                        <a class="navbar-brand" href="dados.php"><p class="title"></p></a>
-                    </nav>
-                </div>    
+                    <a href="consulta.php" class="navbar-brand title"><p class="p">Consulta de Dados</p></a>
+                        <a href="index.php" class="navbar-brand"><h3 class="title">SISTEMA WEB</h3></a>
+                    <a href="cadastroPag.php" class="navbar-brand title"><p class="p">Cadastro de Clientes</p></a>
+                </nav>
+            </div>   
             </div>
             <br>
             <div class="linha">
@@ -131,7 +131,7 @@
                                     $rows = $result->fetchAll();
 
                                     for ($i=0; $i < count($rows); $i++) { 
-                                    echo "<a href='editar.php?id=". $rows[$i]['id'] . "' class='Options'>Editar      </a>";
+                                    echo "<a href='atualizarPag.php?id=". $rows[$i]['id'] . "' class='Options'>Editar      </a>";
                                     echo "<a href='deletar.php?id=". $rows[$i]['id'] . "' class='Options'>      Excluir</a>". "<br><br><br>";
                                     }
                                     ?>

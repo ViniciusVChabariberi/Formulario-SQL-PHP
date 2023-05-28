@@ -18,7 +18,7 @@
         echo "Erro ao tentar fazer a conexão com MYSQL: " . $ex->getMessage();
     }
 
-    $sql = "INSERT INTO `clientes`(`nome`, `endereco`, `bairro`, `cep`, `cidade`, `estado`) VALUES ('$nomeForm','$enderecoForm','$bairroForm','$cepForm', '$cidadeContatoForm','$estadoForm')";
+    $sql = "INSERT INTO `clientes`(`nome`, `endereco`, `bairro`, `cep`, `cidade`, `estado`) VALUES ('$nomeForm','$enderecoForm','$bairroForm','$cepForm', '$cidadeForm','$estadoForm')";
 
     $cadastrarCliente = $pdo->prepare($sql);
     $cadastrarCliente->execute();
@@ -35,22 +35,26 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
   </head>
-    <body class="body">
+    <body class="body--cadastro">
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <nav class="navbar">
-                        <a class="navbar-brand" href="index.php"></a> 
-                            <a class="navbar-brand" href="#"><h3 class="title">SISTEMA WEB</h3></a>   
-                        <a class="navbar-brand" href="dados.php"><p class="title"></p></a>
-                    </nav>
-                </div>    
+            <div class="col">
+                <nav class="navbar verde">
+                    <a href="consulta.php" class="navbar-brand title"><p class="p">Consulta de Dados</p></a>
+                        <a href="index.php" class="navbar-brand"><h3 class="title">SISTEMA WEB</h3></a>
+                    <a href="cadastroPag.php" class="navbar-brand title"><p class="p">Cadastro de Clientes</p></a>
+                </nav>
+            </div>    
             </div>
             <div class="row">
                 <div class="col">
-                <p class="subtitle">Parabéns, seu cadastro foi realizado!</p>
+                <p class="subtitle--cadastro">Parabéns, seu cadastro foi realizado!</p>
+                <br>
+                <br>
+                <br>
+                <br>
                 <a href="index.php" class="Options2"><-- Voltar </a>
-                <a href="dados.php" class="Options2"> Consultar os dados --></a>
+                <a href="consulta.php" class="Options2"> Consultar os dados --></a>
                 </div>
             </div>
         </div>

@@ -9,52 +9,52 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
   </head>
-    <body class="body">
+    <body class="body--atualizar">
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <nav class="navbar">
-                        <a class="navbar-brand" href="index.php"></a> 
-                            <a class="navbar-brand" href="#"><h3 class="title">SISTEMA WEB</h3></a>   
-                        <a class="navbar-brand" href="dados.php"><p class="title"></p></a>
-                    </nav>
-                </div>    
+            <div class="col">
+                <nav class="navbar rosa">
+                    <a href="consulta.php" class="navbar-brand title"><p class="p">Consulta de Dados</p></a>
+                        <a href="index.php" class="navbar-brand"><h3 class="title">SISTEMA WEB</h3></a>
+                    <a href="cadastroPag.php" class="navbar-brand title"><p class="p">Cadastro de Clientes</p></a>
+                </nav>
+            </div>  
             </div>
             <div class="row">
                 <div class="col">
-                    <p class="subtitle">Editar dados do cliente</p>
+                    <p class="subtitle--atualizar">Editar dados do cliente</p>
                 </div>
             </div>
             <div class="row">    
                 <div class="col formulario">
                     <form action="atualizar.php?id=<?=$_GET['id']?>" method="POST">
                         <div class="mb-3">
-                            <label class="formulario_titulos" for="nome">Nome:</label> 
+                            <label class="formulario_titulos--atualizar" for="nome">Nome:</label> 
                             <input type="text" class="form-control" name="nome" id="nome" autocomplete= off required>
                         </div>  
 
                         <div class="mb-3">
-                            <label class="formulario_titulos" for="tele">Endereço:</label> 
+                            <label class="formulario_titulos--atualizar" for="tele">Endereço:</label> 
                             <input type="text" class="form-control"  name="endereco" id="endereco" autocomplete= off required>
                         </div> 
 
                         <div class="mb-3">
-                            <label for="select" class="form-label formulario_titulos">Bairro:</label>
+                            <label for="select" class="form-label formulario_titulos--atualizar">Bairro:</label>
                             <input type="text" class="form-control" name="bairro" id="bairro" autocomplete= off required>
                         </div>
 
                         <div class="mb-3">
-                            <label class="formulario_titulos" for="data">CEP:</label> 
+                            <label class="formulario_titulos--atualizar" for="data">CEP:</label> 
                             <input type="tel" class="form-control" placeholder="xxxxx-xxx" id="cep" name="cep" autocomplete= off required>
                         </div>
 
                         <div class="mb-3">
-                            <label for="select" class="form-label formulario_titulos">Cidade:</label>
+                            <label for="select" class="form-label formulario_titulos--atualizar">Cidade:</label>
                             <input type="text" class="form-control" name="cidade" id="cidade" autocomplete= off required>
                         </div>
                         
                         <div class="mb-3">
-                        <label for="select" class="form-label formulario_titulos">Estado:</label>
+                        <label for="select" class="form-label formulario_titulos--atualizar">Estado:</label>
                             <select class="form-select" name="estado" id="estado" autocomplete= off required>
                                 <option value="sp">SP</option>
                                 <option value="rj">RJ</option>
@@ -63,7 +63,7 @@
                             </select>  
                         </div>
                         <div class="mb-3">    
-                            <input  class="btn botao" type="submit" name="editar" value="editar">
+                            <input  class="btn botao--atualizar" type="submit" name="editar" value="Editar">
                         </div>    
                     </form>
                 </div>
