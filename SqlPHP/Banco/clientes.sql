@@ -32,7 +32,7 @@ CREATE TABLE `clientes` (
   `nome` varchar(100) NOT NULL,
   `endereco` varchar(100) NOT NULL,
   `bairro` varchar(50) NOT NULL,
-  `cep` int(9) NOT NULL,
+  `cep` int(8) NOT NULL,
   `cidade` varchar(100) NOT NULL,
   `estado` enum('SP','RJ','MG','ES') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

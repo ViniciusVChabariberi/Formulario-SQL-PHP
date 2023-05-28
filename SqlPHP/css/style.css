@@ -1,30 +1,36 @@
-body {
-    background-color: rgb(215, 215, 215)
+.body {
+    /*background-color: rgb(215, 215, 215) */
+    background-color: #282828;
 }
 
 .container {
-    background-color: white;
     padding: 0%;
 }
 
 
 /* index.php */
 nav {
-    background-color: #007BFF;
+    /*background-color: #007BFF;*/
+    background-color: #3500d3;
 }
 
 .title {
     font-size: 23px;
-    padding-top: 7px;
-    padding-left: 10px;
-    color: rgb(247, 243, 243);
+    color: #282828;
+    padding-top: 10px;
 }
 
 .Options {
     font-size: 18px;
-    padding-left: 15px;
-    padding-top: 10px;
-    color: white;
+    color: #3500d3;
+    text-decoration: none;
+}
+
+.Options2 {
+    font-size: 18px;
+    color: #3500d3;
+    text-decoration: none;
+    padding-left: 400px;
 }
 
 .subtitle{
@@ -33,16 +39,21 @@ nav {
     text-align: start;
     padding-left: 25px;
     padding-top: 20px;
+    color: #3500d3;
 }
 .subtitle_2{
     font-size: 25px;
     font-weight: bold;
+    text-align: start;
+    padding-left: 25px;
+    color: #3500d3;
 }
 
 .subtitle_two{
     font-size: 18px;
     text-align: start;
     padding-left: 25px;
+    color: #3500d3;
 }
 
 .formulario{
@@ -54,19 +65,23 @@ nav {
     font-size: 18px;
     text-align: start;
     padding-bottom: 10px;
+    color: #3500d3;
 }
 
 .botao{
     width: 100px;
     height: 40px;
+    background-color: #3500d3;
+    border-radius: 10px;
 }
+
 
 /* dados.php */
 
 .consulta{
     padding-top: 40px;
     padding-bottom: 20px;
-    margin-right: 160px;
+    margin-right: 100px;
 }
 
 div.linha {
@@ -83,7 +98,7 @@ div.linha {
     height: 3.5rem;
     width: 2rem;
     padding: 1rem;
-    background-color: #007BFF;
+    background-color: #3500d3;
 }
 
 .tabela_dados{
@@ -93,4 +108,12 @@ div.linha {
 
 .tabela_c{
     border: 1px  black;
+    font-size: 22px;
+    color: #3500d3;
+}
+
+.botao2{
+    width: 70px;
+    height: 40px;
+    background-color: #3500d3;
 }
