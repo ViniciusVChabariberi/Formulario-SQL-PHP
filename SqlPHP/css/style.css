@@ -1,7 +1,7 @@
 .body {
     /*background-color: rgb(215, 215, 215) */
     background: rgb(40,40,40);
-    background: radial-gradient(circle, rgba(40,40,40,1) 47%, rgba(53,0,211,1) 100%);
+    background: radial-gradient(circle, rgba(40,40,40,1) 85%, rgba(15,182,224,1) 100%);
 }
 
 .container {
@@ -11,7 +11,7 @@
 /* index.php */
 nav {
     /*background-color: #007BFF;*/
-    background-color: #3500d3;
+    background-color: #0fb6e0;
 }
 
 .p {
@@ -30,7 +30,7 @@ nav {
     text-align: start;
     padding-left: 25px;
     padding-top: 20px;
-    color: #3500d3;
+    color: #0fb6e0;
 }
 
 .subtitle_2{
@@ -38,19 +38,19 @@ nav {
     font-weight: bold;
     text-align: start;
     padding-left: 25px;
-    color: #3500d3;
+    color: #0fb6e0;
 }
 
 .subtitle_two{
     font-size: 18px;
     text-align: start;
     padding-left: 25px;
-    color: #3500d3;
+    color: #0fb6e0;
 }
 
 .Options {
     font-size: 18px;
-    color: #3500d3;
+    color: #0fb6e0;
     text-decoration: none;
 }
 
@@ -63,13 +63,13 @@ nav {
     font-size: 18px;
     text-align: start;
     padding-bottom: 10px;
-    color: #3500d3;
+    color: #0fb6e0;
 }
 
 .botao{
     width: 100px;
     height: 40px;
-    background-color: #3500d3;
+    background-color: #0fb6e0;
     border-radius: 10px;
 }
 
@@ -81,40 +81,14 @@ nav {
     margin-right: 100px;
 }
 
-div.linha {
-    display: flex;
-    justify-content: center;
-}
 
-.tabela{
-    max-width: 65vw;
-}
-
-.tabela_linha {
-    gap: 50px;
-    height: 3.5rem;
-    width: 2rem;
-    padding: 1rem;
-    background-color: #3500d3;
-}
-
-.tabela_dados{
-    font-size: 1.2rem;
-    font-weight: 700; 
-}
-
-.tabela_c{
-    border: 1px  black;
-    font-size: 22px;
-    color: #3500d3;
-}
 
 
 /* cadastro.php */
 
 .body--cadastro {
     background: rgb(40,40,40);
-    background: radial-gradient(circle, rgba(40,40,40,1) 47%, rgba(20,235,99,1) 100%);
+    background: radial-gradient(circle, rgba(40,40,40,1) 85%, rgba(20,235,99,1) 100%);
 }
 
 .verde{
@@ -141,7 +115,7 @@ div.linha {
 
 .body--deletar {
     background: rgb(40,40,40);
-    background: radial-gradient(circle, rgba(40,40,40,1) 47%, rgba(235,20,20,1) 100%);
+    background: radial-gradient(circle, rgba(40,40,40,1) 85%, rgba(235,20,20,1) 100%);
 }
 
 .vermelho{
@@ -168,7 +142,7 @@ div.linha {
 
 .body--atualizar {
     background: rgb(40,40,40);
-    background: radial-gradient(circle, rgba(40,40,40,1) 47%, rgba(230,11,225,1) 100%);
+    background: radial-gradient(circle, rgba(40,40,40,1) 85%, rgba(230,11,225,1) 100%);
 }
 
 .rosa{

@@ -21,6 +21,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/reset.css">
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
     <title>PHP - Sistema de Acesso ao Banco de Dados</title>
 </head>
 <body class="body">
@@ -41,106 +42,97 @@
             <a href="index.php" class="Options">Não tem um cadastro? Clique aqui para cadastrar.</a>
             <br>
             <br>
-            <div class="linha">
-                <div class="table-responsive"> 
+            <table class="table Options table-responsive table-hover table-light table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Endereço</th>
+      <th scope="col">Bairro</th>
+      <th scope="col">CEP</th>
+      <th scope="col">Cidade</th>
+      <th scope="col">Estado</th>
+      <th scope="col">Opções</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider table-dark Options">
+    <tr>
+        <td><?php
+                $sql = "SELECT * FROM clientes";
+                $result = $pdo->query($sql);
+                $rows = $result->fetchAll();
+
+                for ($i=0; $i < count($rows); $i++) { 
+                echo $rows[$i]['nome'] . "<br><br><br>";
+                }
+            ?>
+        </td>
+        <td><?php
+                $sql = "SELECT * FROM clientes";
+                $result = $pdo->query( $sql );
+                $rows = $result->fetchAll();
+
+                for ($i=0; $i < count($rows); $i++) { 
+                echo $rows[$i]['endereco'] . "<br><br><br>";
+                }
+            ?>
+        </td>
+        <td><?php
+                $sql = "SELECT * FROM clientes";
+                $result = $pdo->query( $sql );
+                $rows = $result->fetchAll();
+
+                for ($i=0; $i < count($rows); $i++) { 
+                echo  $rows[$i]['bairro'].  "<br><br><br>";
+                }
+            ?>
+        </td>
+        <td><?php
+                $sql = "SELECT * FROM clientes";
+                $result = $pdo->query( $sql );
+                $rows = $result->fetchAll();
+
+                for ($i=0; $i < count($rows); $i++) { 
+                echo  $rows[$i]['cep'].  "<br><br><br>";
+                }
+            ?>
+        </td>
+        <td><?php
+                $sql = "SELECT * FROM clientes";
+                $result = $pdo->query( $sql );
+                $rows = $result->fetchAll();
+
+                for ($i=0; $i < count($rows); $i++) { 
+                echo  $rows[$i]['cidade'] . "<br><br><br>";
+                }
+            ?>
+        </td>
+        <td><?php
+                $sql = "SELECT * FROM clientes";
+                $result = $pdo->query( $sql );
+                $rows = $result->fetchAll();
+
+                for ($i=0; $i < count($rows); $i++) { 
+                echo  $rows[$i]['estado'] . "<br><br><br>";
+                }
+            ?>
+        </td>
+        <td><?php
+                $sql = "SELECT * FROM clientes";
+                $result = $pdo->query( $sql );
+                $rows = $result->fetchAll();
+
+                for ($i=0; $i < count($rows); $i++) { 
+                    
+                echo "<a  style='padding: 0px; margin: 0px 20px 0px 0px;' href='atualizarPag.php?id=". $rows[$i]['id'] . "' class='Options btn btn-sm' role='button'><lord-icon  src='https://cdn.lordicon.com/weoiqraa.json' trigger='hover' colors='primary:#0fb6e0' style='width:25px;height:25px' </lord-icon>      </a>";
+                echo "<a style='padding: 0px; margin: 0px;' href='deletar.php?id=". $rows[$i]['id'] . "' class='Options btn btn-sm' style='padding: 0px; margin: 0px;' role='button'>      <lord-icon  src='https://cdn.lordicon.com/kfzfxczd.json' trigger='hover' colors='primary:#0fb6e0' style='width:25px;height:25px' </lord-icon></a>". "<br><br>";
+                }
                 
-                    <table class="tabela table table-borderless">
-                        <thead>
-                            <tr class="tabela_linha">
-                                <th class="tabela_dados">Nome</th>
-                                <th class="tabela_dados">Endereço</th>
-                                <th class="tabela_dados">Bairro</th>
-                                <th class="tabela_dados">CEP</th>
-                                <th class="tabela_dados">Cidade</th>
-                                <th class="tabela_dados">Estado</th>
-                                <th class="tabela_dados">Opções</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="tabela_c">
-                                    <?php
-                                    $sql = "SELECT * FROM clientes";
-                                    $result = $pdo->query($sql);
-                                    $rows = $result->fetchAll();
-
-                                    for ($i=0; $i < count($rows); $i++) { 
-                                    echo $rows[$i]['nome'] . "<br><br><br>";
-                                    }
-                                    ?>
-                                </td>
-                                <td class="tabela_c">
-                                    <?php
-                                    $sql = "SELECT * FROM clientes";
-                                    $result = $pdo->query( $sql );
-                                    $rows = $result->fetchAll();
-
-                                    for ($i=0; $i < count($rows); $i++) { 
-                                    echo $rows[$i]['endereco'] . "<br><br><br>";
-                                    }
-                                    ?>
-                                </td>
-                                <td class="tabela_c">
-                                    <?php
-                                    $sql = "SELECT * FROM clientes";
-                                    $result = $pdo->query( $sql );
-                                    $rows = $result->fetchAll();
-
-                                    for ($i=0; $i < count($rows); $i++) { 
-                                    echo  $rows[$i]['bairro'].  "<br><br><br>";
-                                    }
-                                    ?>
-                                </td>
-                                <td class="tabela_c">
-                                    <?php
-                                    $sql = "SELECT * FROM clientes";
-                                    $result = $pdo->query( $sql );
-                                    $rows = $result->fetchAll();
-
-                                    for ($i=0; $i < count($rows); $i++) { 
-                                    echo  $rows[$i]['cep'].  "<br><br><br>";
-                                    }
-                                    ?>
-                                </td>
-                                <td class="tabela_c">
-                                    <?php
-                                    $sql = "SELECT * FROM clientes";
-                                    $result = $pdo->query( $sql );
-                                    $rows = $result->fetchAll();
-
-                                    for ($i=0; $i < count($rows); $i++) { 
-                                    echo  $rows[$i]['cidade'] . "<br><br><br>";
-                                    }
-                                    ?>
-                                </td>
-                                <td class="tabela_c">
-                                    <?php
-                                    $sql = "SELECT * FROM clientes";
-                                    $result = $pdo->query( $sql );
-                                    $rows = $result->fetchAll();
-
-                                    for ($i=0; $i < count($rows); $i++) { 
-                                    echo  $rows[$i]['estado'] . "<br><br><br>";
-                                    }
-                                    ?>
-                                </td>
-                                <td class="tabela_c">
-                                     <?php
-                                    $sql = "SELECT * FROM clientes";
-                                    $result = $pdo->query( $sql );
-                                    $rows = $result->fetchAll();
-
-                                    for ($i=0; $i < count($rows); $i++) { 
-                                    echo "<a href='atualizarPag.php?id=". $rows[$i]['id'] . "' class='Options'>Editar      </a>";
-                                    echo "<a href='deletar.php?id=". $rows[$i]['id'] . "' class='Options'>      Excluir</a>". "<br><br><br>";
-                                    }
-                                    ?>
-                                </td>    
-                            </tr>
-                        </tbody>
-                    </table>   
-                </div>
-            </div>
+            ?>
+          
+        </td>
+    </tr>
+  </tbody>
+</table>
         <br>
         <br>
         <br>      
