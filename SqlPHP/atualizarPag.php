@@ -1,3 +1,40 @@
+<?php
+    define('MYSQL_HOST', 'localhost:3306');
+    define('MYSQL_USER', 'root');
+    define('MYSQL_PASSWORD', '');
+    define('MYSQL_DB_NAME', 'bd_sistemas');
+ 
+
+     try {
+        $PDO = new PDO('mysql:host=' . MYSQL_HOST . ';dbname=' . MYSQL_DB_NAME, MYSQL_USER, MYSQL_PASSWORD);
+
+    } catch (PDOException $ex) {
+        echo "Erro ao tentar fazer a conexão com MYSQL: " . $ex->getMessage();
+    }
+
+    
+    $sql = "SELECT * FROM clientes";
+    $stmt = $PDO->prepare($sql);
+   
+    $stmt->execute();
+    
+    if ($stmt->rowCount() > 0) {
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+        $nome = $row['nome'];
+        $endereco = $row['endereco'];
+        $bairro = $row['bairro'];
+        $cep = $row['cep'];
+        $cidade = $row['cidade'];
+        $estado = $row['estado'];
+    } else {
+        echo 'Registro não encontrado.';
+    }
+    
+
+
+
+?>    
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -30,32 +67,32 @@
                     <form action="atualizar.php?id=<?=$_GET['id']?>" method="POST">
                         <div class="mb-3">
                             <label class="formulario_titulos--atualizar" for="nome">Nome:</label> 
-                            <input type="text" class="form-control" name="nome" id="nome" autocomplete= off required>
+                            <input type="text" class="form-control" name="nome" id="nome" autocomplete= off value="<?php echo $nome;?>" required>
                         </div>  
 
                         <div class="mb-3">
                             <label class="formulario_titulos--atualizar" for="tele">Endereço:</label> 
-                            <input type="text" class="form-control"  name="endereco" id="endereco" autocomplete= off required>
+                            <input type="text" class="form-control"  name="endereco" id="endereco" autocomplete= off value="<?php echo $endereco; ?>" required>
                         </div> 
 
                         <div class="mb-3">
                             <label for="select" class="form-label formulario_titulos--atualizar">Bairro:</label>
-                            <input type="text" class="form-control" name="bairro" id="bairro" autocomplete= off required>
+                            <input type="text" class="form-control" name="bairro" id="bairro" autocomplete= off value="<?php echo $bairro; ?>" required>
                         </div>
 
                         <div class="mb-3">
                             <label class="formulario_titulos--atualizar" for="data">CEP:</label> 
-                            <input type="tel" class="form-control" placeholder="xxxxx-xxx" id="cep" name="cep" autocomplete= off required>
+                            <input type="tel" class="form-control" placeholder="xxxxx-xxx" id="cep" name="cep" autocomplete= off value="<?php echo $cep; ?>" required>
                         </div>
 
                         <div class="mb-3">
                             <label for="select" class="form-label formulario_titulos--atualizar">Cidade:</label>
-                            <input type="text" class="form-control" name="cidade" id="cidade" autocomplete= off required>
+                            <input type="text" class="form-control" name="cidade" id="cidade" autocomplete= off value="<?php echo $cidade; ?>" required>
                         </div>
                         
                         <div class="mb-3">
                         <label for="select" class="form-label formulario_titulos--atualizar">Estado:</label>
-                            <select class="form-select" name="estado" id="estado" autocomplete= off required>
+                            <select class="form-select" name="estado" id="estado" autocomplete= off value="<?php echo $estado; ?>" required>
                                 <option value="sp">SP</option>
                                 <option value="rj">RJ</option>
                                 <option value="mg">MG</option>

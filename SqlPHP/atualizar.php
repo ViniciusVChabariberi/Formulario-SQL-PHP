@@ -22,12 +22,12 @@
 
     $id = (int) $_GET['id'];
 
-if ($resultDelete !== false) {
+    if ($resultDelete !== false) {
 
-    header("Location: consulta.php");
-    exit();
-} else {
-
-    echo "Erro ao excluir os dados.";
-}
-?>
+        header("Location: consulta.php");
+        exit();
+    } else {
+    
+        echo "Erro ao excluir os dados.";
+    }
+?>           
