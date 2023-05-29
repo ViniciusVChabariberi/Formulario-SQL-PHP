@@ -39,100 +39,100 @@
             <div class="linha">
             <h2 class="subtitle_2 consulta">Consultar - Contatos Agendados</h2>
             </div>
-            <a href="index.php" class="Options">Não tem um cadastro? Clique aqui para cadastrar.</a>
+            <a href="cadastroPag.php" class="Options">Não tem um cadastro? Clique aqui para cadastrar.</a>
             <br>
             <br>
-            <table class="table Options table-responsive table-hover table-light table-bordered">
-  <thead>
-    <tr>
-      <th scope="col">Nome</th>
-      <th scope="col">Endereço</th>
-      <th scope="col">Bairro</th>
-      <th scope="col">CEP</th>
-      <th scope="col">Cidade</th>
-      <th scope="col">Estado</th>
-      <th scope="col">Opções</th>
-    </tr>
-  </thead>
-  <tbody class="table-group-divider table-dark Options">
-    <tr>
-        <td><?php
-                $sql = "SELECT * FROM clientes";
-                $result = $pdo->query($sql);
-                $rows = $result->fetchAll();
+            <table class="table Options tabela table-responsive table-hover table-light table-bordered">
+                <thead>
+                    <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Endereço</th>
+                    <th scope="col">Bairro</th>
+                    <th scope="col">CEP</th>
+                    <th scope="col">Cidade</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Opções</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider table-dark Options">
+                    <tr>
+                        <td><?php
+                                $sql = "SELECT * FROM clientes";
+                                $result = $pdo->query($sql);
+                                $rows = $result->fetchAll();
 
-                for ($i=0; $i < count($rows); $i++) { 
-                echo $rows[$i]['nome'] . "<br><br><br>";
-                }
-            ?>
-        </td>
-        <td><?php
-                $sql = "SELECT * FROM clientes";
-                $result = $pdo->query( $sql );
-                $rows = $result->fetchAll();
+                                for ($i=0; $i < count($rows); $i++) { 
+                                echo $rows[$i]['nome'] . "<br><br><br>";
+                                }
+                            ?>
+                        </td>
+                        <td><?php
+                                $sql = "SELECT * FROM clientes";
+                                $result = $pdo->query( $sql );
+                                $rows = $result->fetchAll();
 
-                for ($i=0; $i < count($rows); $i++) { 
-                echo $rows[$i]['endereco'] . "<br><br><br>";
-                }
-            ?>
-        </td>
-        <td><?php
-                $sql = "SELECT * FROM clientes";
-                $result = $pdo->query( $sql );
-                $rows = $result->fetchAll();
+                                for ($i=0; $i < count($rows); $i++) { 
+                                echo $rows[$i]['endereco'] . "<br><br><br>";
+                                }
+                            ?>
+                        </td>
+                        <td><?php
+                                $sql = "SELECT * FROM clientes";
+                                $result = $pdo->query( $sql );
+                                $rows = $result->fetchAll();
 
-                for ($i=0; $i < count($rows); $i++) { 
-                echo  $rows[$i]['bairro'].  "<br><br><br>";
-                }
-            ?>
-        </td>
-        <td><?php
-                $sql = "SELECT * FROM clientes";
-                $result = $pdo->query( $sql );
-                $rows = $result->fetchAll();
+                                for ($i=0; $i < count($rows); $i++) { 
+                                echo  $rows[$i]['bairro'].  "<br><br><br>";
+                                }
+                            ?>
+                        </td>
+                        <td><?php
+                                $sql = "SELECT * FROM clientes";
+                                $result = $pdo->query( $sql );
+                                $rows = $result->fetchAll();
 
-                for ($i=0; $i < count($rows); $i++) { 
-                echo  $rows[$i]['cep'].  "<br><br><br>";
-                }
-            ?>
-        </td>
-        <td><?php
-                $sql = "SELECT * FROM clientes";
-                $result = $pdo->query( $sql );
-                $rows = $result->fetchAll();
+                                for ($i=0; $i < count($rows); $i++) { 
+                                echo  $rows[$i]['cep'].  "<br><br><br>";
+                                }
+                            ?>
+                        </td>
+                        <td><?php
+                                $sql = "SELECT * FROM clientes";
+                                $result = $pdo->query( $sql );
+                                $rows = $result->fetchAll();
 
-                for ($i=0; $i < count($rows); $i++) { 
-                echo  $rows[$i]['cidade'] . "<br><br><br>";
-                }
-            ?>
-        </td>
-        <td><?php
-                $sql = "SELECT * FROM clientes";
-                $result = $pdo->query( $sql );
-                $rows = $result->fetchAll();
+                                for ($i=0; $i < count($rows); $i++) { 
+                                echo  $rows[$i]['cidade'] . "<br><br><br>";
+                                }
+                            ?>
+                        </td>
+                        <td><?php
+                                $sql = "SELECT * FROM clientes";
+                                $result = $pdo->query( $sql );
+                                $rows = $result->fetchAll();
 
-                for ($i=0; $i < count($rows); $i++) { 
-                echo  $rows[$i]['estado'] . "<br><br><br>";
-                }
-            ?>
-        </td>
-        <td><?php
-                $sql = "SELECT * FROM clientes";
-                $result = $pdo->query( $sql );
-                $rows = $result->fetchAll();
+                                for ($i=0; $i < count($rows); $i++) { 
+                                echo  $rows[$i]['estado'] . "<br><br><br>";
+                                }
+                            ?>
+                        </td>
+                        <td><?php
+                                $sql = "SELECT * FROM clientes";
+                                $result = $pdo->query( $sql );
+                                $rows = $result->fetchAll();
 
-                for ($i=0; $i < count($rows); $i++) { 
-                    
-                echo "<a  style='padding: 0px; margin: 0px 20px 0px 0px;' href='atualizarPag.php?id=". $rows[$i]['id'] . "' class='Options btn btn-sm' role='button'><lord-icon  src='https://cdn.lordicon.com/weoiqraa.json' trigger='hover' colors='primary:#0fb6e0' style='width:25px;height:25px' </lord-icon>      </a>";
-                echo "<a style='padding: 0px; margin: 0px;' href='deletar.php?id=". $rows[$i]['id'] . "' class='Options btn btn-sm' style='padding: 0px; margin: 0px;' role='button'>      <lord-icon  src='https://cdn.lordicon.com/kfzfxczd.json' trigger='hover' colors='primary:#0fb6e0' style='width:25px;height:25px' </lord-icon></a>". "<br><br>";
-                }
-                
-            ?>
-          
-        </td>
-    </tr>
-  </tbody>
-</table>
+                                for ($i=0; $i < count($rows); $i++) { 
+                                    
+                                echo "<a  style='padding: 0px; margin: 0px 20px 0px 0px;' href='atualizarPag.php?id=". $rows[$i]['id'] . "' class='Options btn btn-sm' role='button'><lord-icon  src='https://cdn.lordicon.com/weoiqraa.json' trigger='hover' colors='primary:#0fb6e0' style='width:25px;height:25px' </lord-icon>      </a>";
+                                echo "<a style='padding: 0px; margin: 0px;' href='deletar.php?id=". $rows[$i]['id'] . "' class='Options btn btn-sm' style='padding: 0px; margin: 0px;' role='button'>      <lord-icon  src='https://cdn.lordicon.com/kfzfxczd.json' trigger='hover' colors='primary:#0fb6e0' style='width:25px;height:25px' </lord-icon></a>". "<br><br>";
+                                }
+                                
+                            ?>
+                        
+                        </td>
+                    </tr>
+                </tbody>
+                </table>
         <br>
         <br>
         <br>      

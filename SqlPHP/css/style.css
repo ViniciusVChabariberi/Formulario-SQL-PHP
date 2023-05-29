@@ -36,8 +36,8 @@ nav {
 .subtitle_2{
     font-size: 25px;
     font-weight: bold;
-    text-align: start;
-    padding-left: 25px;
+    text-align: center;
+    padding-left: 100px;
     color: #0fb6e0;
 }
 
@@ -78,10 +78,8 @@ nav {
 .consulta{
     padding-top: 40px;
     padding-bottom: 20px;
-    margin-right: 100px;
+    margin-right: 200px;
 }
-
-
 
 
 /* cadastro.php */
@@ -177,4 +175,10 @@ nav {
     height: 40px;
     background-color: #e60be1;
     border-radius: 10px;
+}
+
+@media(max-width:580px) {
+    #tabela{
+        overflow: scroll;
+    }
 }
