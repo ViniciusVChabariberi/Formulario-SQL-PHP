@@ -12,8 +12,8 @@
         echo "Erro ao tentar fazer a conexão com MYSQL: " . $ex->getMessage();
     }
 
-    
-    $sql = "SELECT * FROM clientes";
+    $id = (int) $_GET['id'];
+    $sql = "SELECT * FROM clientes WHERE id = $id";
     $stmt = $PDO->prepare($sql);
    
     $stmt->execute();
