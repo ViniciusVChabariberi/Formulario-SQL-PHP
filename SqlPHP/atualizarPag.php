@@ -53,7 +53,7 @@
                 <nav class="navbar rosa">
                     <a href="consulta.php" class="navbar-brand title"><p class="p">Consulta de Dados</p></a>
                         <a href="index.php" class="navbar-brand"><h3 class="title">SISTEMA WEB</h3></a>
-                    <a href="cadastroPag.php" class="navbar-brand title"><p class="p">Cadastro de Clientes</p></a>
+                    <a href="index.php" class="navbar-brand title"><p class="p">Cadastro de Clientes</p></a>
                 </nav>
             </div>  
             </div>
